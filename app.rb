@@ -7,6 +7,8 @@ class App < Sinatra::Base
     end
 
     post "/newteam" do
+
+        # in params i could have used strings or symbols @name = params[:name]
         @name = params["name"]
         @coach = params["coach"]
         @point_guard = params["pg"]
@@ -14,7 +16,7 @@ class App < Sinatra::Base
         @power_forward = params["pf"]
         @small_forward = params["sf"]
         @center = params["c"]
-        
+
         erb :team
     end
 
